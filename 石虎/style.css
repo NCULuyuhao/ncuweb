@@ -1,0 +1,20 @@
+.wrap {
+  width: 500px;
+  margin: 0 auto;
+  
+}
+
+.wrap > select {
+  width: 80%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.show01, .show02, .show03, .show04, .show05, .show06{
+  display: none;
+}
+.show01.active, .show02.active, .show03.active, .show04.active, .show05.active, .show06.active{
+  display: block;
+}
+

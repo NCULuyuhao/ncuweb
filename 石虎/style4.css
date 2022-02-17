@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+.faq {
+  padding: 20px;
+  width: 60%;
+  min-width:450px;
+  margin: auto;
+  position: relative;
+  height: auto;
+}
+
+.faq-container {
+  width: 100%;
+  height: 100%;
+
+}
+
+.faq-label {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5BA3BA;
+  border-radius: 5px;
+
+}
+
+.faq-label-text {
+  color: white;
+
+}
+
+.faq-label-icon {
+  padding: 2px 3px;
+  background: #43BEE6;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-icons {
+  color: white;
+  transition: 0.3s ease;
+}
+
+.faq-answer {
+  transition: 0.3s ease;
+  margin-top: 15px;
+  height: 0;
+  border-radius: 6px;
+  color: rgba(127, 121, 121, 1);
+  overflow: hidden;
+
+}
+
+.faq-answer-content {
+  padding: 5px 0 5px 5px;
+  
+
+}
+
+.active {
+
+  background: #FFFFFF;
+  border: 1px solid #C7C4C4;
+  
+  height: auto;
+  margin-bottom: 25px;
+
+}
+.rotate{
+  transform: rotate(180deg)
+}
+.global-label{
+  width:100%;
+  height:35px;
+  border-bottom: solid 2px #C4C1C1;
+  margin-bottom: 35px;
+}
+.global-label-text{
+  font-size:25px;
+  color:#196B85;
+}
+.input-control {
+  margin: 30px;
+  position: relative;
+  width: 300px;
+}
+.input-control__label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+.input-control__input {
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 15px;
+}
+.input-control__input::placeholder {
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.input-control__input:focus::placeholder {
+  opacity: 1;
+}
+.input-control__input:focus + .input-control__label, .input-control__input:not(:placeholder-shown) + .input-control__label {
+  background-color: white;
+  top: 0;
+}
+/*Create by:
+Harikant Sharma.*/
+:root {
+  --placeholder-color: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.float-group {
+  position: relative;
+  margin: 1.5em;
+}
+
+/*By making (.float-group)'s position relative (.float-label) is set according to its parent with position absolute*/
+
+/*In (.float-label) I have done some basic styling to make labe in center on input tag*/
+
+/*NOTE: Value of padding for (.float-label) may chage according to your requriments*/
+
+.float-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  padding: 0.5em;
+  color: var(--placeholder-color);
+  
+}
+
+/*In input again I have some basic styling and again*/
+
+input {
+  padding: 5em 5em;
+  border-radius: 0.5em;
+  border: 0.1em solid rgb(2, 154, 255);
+}
+
+/*In input:focus I have put outline to none because in different browsers there are different default outline(it's really wired) when a input is focused */
+
+input:focus {
+  outline: none;
+}
+
+/*Here firstly, I put ------ input:focus~.float-label with a general sibiling selector you should read this (https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) artical for a proper under standing of ~ selector ------ and its work is to float label on the top of input tag*/
+
+/*Secondly, I put input:not(:focus):valid ~ .float-label it's function is hold the floating position when there is some thing is written in the input tag*/
+
+input:focus ~ .float-label,
+input:not(:focus):valid ~ .float-label {
+  top: -1.6em;
+  color: black;
+  background-color: white;
+  padding: 0.1em 0.6em;
+  left: 0.3em;
+  border-radius: 0.25em;
+}
+
+/*Remember to put autocomplete to OFF and requried in HTML when delare input tag*/
+
+/*Create by:
+Harikant Sharma.*/
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
